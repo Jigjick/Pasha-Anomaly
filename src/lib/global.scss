@@ -1,0 +1,220 @@
+body {
+	--full-height: calc(100vh - 10rem);
+
+	/* --- Современная фиолетовая палитра (Светлая тема) --- */
+	--primary: #7c3aed; /* Насыщенный фиолетовый (Violet 600) */
+	--on-primary: #ffffff;
+	--primary-container: #ede9fe;
+	--on-primary-container: #2e1065;
+
+	--secondary: #6d28d9;
+	--on-secondary: #ffffff;
+	--secondary-container: #f3e8ff;
+	--on-secondary-container: #3b0764;
+
+	--tertiary: #c026d3; /* Фуксия-акцент для глубины */
+	--on-tertiary: #ffffff;
+	--tertiary-container: #fae8ff;
+	--on-tertiary-container: #4a044e;
+
+	--error: #e11d48;
+	--on-error: #ffffff;
+	--error-container: #ffe4e6;
+	--on-error-container: #4c0519;
+
+	/* Фоны и поверхности с лёгким лавандовым подтоном */
+	--background: #faf8ff;
+	--on-background: #1e1b2e;
+	--surface: #f7f4ff;
+	--on-surface: #1e1b2e;
+	--surface-variant: #e9e3ff;
+	--on-surface-variant: #4c4566;
+
+	--outline: #8b7fb8;
+	--outline-variant: #dcd4f7;
+	--shadow: rgba(124, 58, 237, 0.15);
+	--scrim: rgba(19, 13, 38, 0.5);
+
+	--inverse-surface: #2b2640;
+	--inverse-on-surface: #f5f3ff;
+	--inverse-primary: #c4b5fd;
+
+	--surface-dim: #ebe5ff;
+	--surface-bright: #ffffff;
+	--surface-container-lowest: #ffffff;
+	--surface-container-low: #f5f2ff;
+	--surface-container: #efeaff;
+	--surface-container-high: #e6dfff;
+	--surface-container-highest: #ddd3ff;
+
+	/* Градиенты */
+	--gradient-primary: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 50%, #c026d3 100%);
+	--gradient-surface: linear-gradient(180deg, #faf8ff 0%, #f0ebff 100%);
+
+	/* Скругления */
+	--radius-card: 24px;
+	--radius-pill: 9999px;
+
+	background: var(--gradient-surface);
+	color: var(--on-background);
+	min-height: 100vh;
+	transition: background 0.3s ease, color 0.3s ease;
+
+	&.dark {
+		/* --- Современная фиолетовая палитра (Тёмная тема) --- */
+		--primary: #a78bfa; /* Мягкий неоново-фиолетовый */
+		--on-primary: #1e0b4b;
+		--primary-container: #4c1d95;
+		--on-primary-container: #ede9fe;
+
+		--secondary: #c4b5fd;
+		--on-secondary: #2e1065;
+		--secondary-container: #3b1778;
+		--on-secondary-container: #f3e8ff;
+
+		--tertiary: #e879f9;
+		--on-tertiary: #4a044e;
+		--tertiary-container: #701a75;
+		--on-tertiary-container: #fae8ff;
+
+		--error: #fda4af;
+		--on-error: #4c0519;
+		--error-container: #881337;
+		--on-error-container: #ffe4e6;
+
+		/* Глубокие космически-фиолетовые фоны */
+		--background: #0f0b1a;
+		--on-background: #f3f0ff;
+		--surface: #140f24;
+		--on-surface: #f3f0ff;
+		--surface-variant: #292045;
+		--on-surface-variant: #c7bfe6;
+
+		--outline: #796da3;
+		--outline-variant: #342957;
+		--shadow: rgba(0, 0, 0, 0.5);
+		--scrim: rgba(0, 0, 0, 0.75);
+
+		--inverse-surface: #ede9fe;
+		--inverse-on-surface: #1e1b2e;
+		--inverse-primary: #7c3aed;
+
+		--surface-dim: #0c0914;
+		--surface-bright: #282042;
+		--surface-container-lowest: #0a0712;
+		--surface-container-low: #161029;
+		--surface-container: #1d1536;
+		--surface-container-high: #251c42;
+		--surface-container-highest: #302454;
+
+		/* Тёмные градиенты */
+		--gradient-primary: linear-gradient(135deg, #7c3aed 0%, #9333ea 50%, #db2777 100%);
+		--gradient-surface: radial-gradient(circle at top right, #231545 0%, #0f0b1a 65%);
+	}
+}
+
+body,
+table,
+label,
+.tooltip,
+.tooltip.max {
+	font-size: 1rem;
+}
+
+/* --- Современные скругления и градиенты для элементов интерфейса --- */
+
+/* Кнопки (кроме текстовых ссылок) делаем полностью круглыми (капсулы) */
+button:not([role='link']),
+.btn,
+input[type='submit'],
+input[type='button'] {
+	border-radius: var(--radius-pill) !important;
+	background: var(--gradient-primary);
+	color: #ffffff;
+	border: none;
+	padding: 0.65rem 1.4rem;
+	font-weight: 600;
+	box-shadow: 0 4px 15px var(--shadow);
+	transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+	cursor: pointer;
+}
+
+button:not([role='link']):hover {
+	transform: translateY(-2px);
+	box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4);
+	filter: brightness(1.08);
+}
+
+button:not([role='link']):active {
+	transform: translateY(0);
+}
+
+/* Карточки, модальные окна, таблицы и блоки */
+dialog,
+.card,
+.modal,
+table,
+pre,
+code {
+	border-radius: var(--radius-card) !important;
+	overflow: hidden;
+	box-shadow: 0 8px 30px var(--shadow);
+	border: 1px solid var(--outline-variant);
+}
+
+/* Поля ввода и выпадающие списки */
+input:not([type='checkbox']):not([type='radio']),
+select,
+textarea {
+	border-radius: 16px !important;
+	border: 1px solid var(--outline-variant);
+	background-color: var(--surface-container-lowest);
+	color: var(--on-surface);
+	padding: 0.6rem 1rem;
+	transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+	outline: none;
+	border-color: var(--primary);
+	box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.25);
+}
+
+/* Всплывающие подсказки */
+.tooltip,
+.tooltip.max {
+	border-radius: 16px !important;
+	background: var(--surface-container-highest);
+	box-shadow: 0 8px 24px var(--shadow);
+	border: 1px solid var(--outline-variant);
+}
+
+@keyframes rainbow_animation {
+	0% {
+		background-position: 0 0;
+	}
+
+	100% {
+		background-position: 400% 0;
+	}
+}
+
+button[role='link'] {
+	padding: 0;
+	background-color: transparent !important;
+	border: none;
+	color: var(--primary);
+	font-weight: 500;
+
+	display: flex;
+	align-items: center;
+	gap: 0.25em;
+	text-decoration: none !important;
+	transition: opacity 0.2s ease;
+}
+
+button[role='link']:hover {
+	opacity: 0.8;
+}
