@@ -21,7 +21,7 @@
 
 		<a
 			draggable
-			href={`javascript:${data.bookmark.replaceAll('%ORIGIN%', page.url.origin)}`}
+			href={`javascript:${data.bookmark.replaceAll('%ORIGIN%', page.url.origin + '/Pasha-Anomaly')}`}
 			class="link"
 			onclick={handleBookmarkClick}>Pasha Anomaly</a
 		>
