@@ -131,19 +131,25 @@
 				>{$_('source_code')}</a
 			>
 			-
-			<a href="https://github.com/issues" class="link" target="_blank"
+			<a href="https://github.com" class="link" target="_blank"
 				>{$_('report_issue')}</a
 			>
 			-
-			<a href="https://forms.gle" class="link" target="_blank"
-				>{$_('announcement_designFeedback_footer')}</a
+			<a
+				href="https://docs.google.com/forms/d/e/1FAIpQLSd6KcEn4Ay6aCS6a7cXvov9-kTDeHqODHcokpYTlrpB1p3Wbw/viewform?usp=header"
+				class="link"
+				target="_blank">{$_('announcement_designFeedback_footer')}</a
 			>
 		</p>
 	</footer>
 
 	<div class="snackbar" class:active={announcementActive}>
 		<div class="max">{$_('announcement_designFeedback_text')}</div>
-		<a class="inverse-link" target="_blank" href="https://forms.gle">
+		<a
+			class="inverse-link"
+			target="_blank"
+			href="https://docs.google.com/forms/d/e/1FAIpQLSd6KcEn4Ay6aCS6a7cXvov9-kTDeHqODHcokpYTlrpB1p3Wbw/viewform?usp=header"
+		>
 			{$_('announcement_designFeedback_link')}
 		</a>
 		<button class="transparent square" onclick={hideAnnouncement}><Icon d={mdiClose}></Icon></button>
@@ -155,9 +161,12 @@
 		text-align: center;
 	}
 
-	.lang-select select,
-	.lang-select option {
+	:global(.lang-select select),
+	:global(.lang-select select:focus),
+	:global(.lang-select option) {
 		color: var(--on-surface) !important;
 		background-color: var(--surface-container-high) !important;
+		-webkit-text-fill-color: var(--on-surface) !important;
+		opacity: 1 !important;
 	}
 </style>
