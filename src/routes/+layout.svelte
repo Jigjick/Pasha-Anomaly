@@ -131,7 +131,7 @@
 				>{$_('source_code')}</a
 			>
 			-
-			<a href="https://github.com" class="link" target="_blank"
+			<a href="https://github.com/Jigjick/Pasha-Anomaly/issues/" class="link" target="_blank"
 				>{$_('report_issue')}</a
 			>
 			-
