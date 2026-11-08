@@ -11,36 +11,6 @@
 	import { onMount } from 'svelte';
 
 	const languageNames: Record<string, string> = {
-		en: 'English',
-		'zh-Hans': '简体中文'
-	};
-
-	async function setup() {
-		register('en', () => import('$lib/locales/en.json'));
-		register('zh-Hans', () => import('$lib/locales/zh-Hans.json'));
-
-		function getFinalInitialLocale() {
-			let zhForm,
-				orgNavLang = getLocaleFromNavigator() || '',
-				navLang = orgNavLang.toLowerCase();
-			if (navLang !== null && navLang.startsWith('zh')) {
-				if (
-					navLang.indexOf('-tw') !== -1 ||
-					navLang.indexOf('-hk') !== -1 ||
-					navLang.indexOf('-mo') !== -1 ||
-					navLang.indexOf('-ha<script lang="ts">
-	import 'beercss/dist/cdn/beer.min.css';
-	import 'beercss/dist/cdn/beer.min.js';
-	import '$lib/global.scss';
-
-	import ogImage from '$lib/assets/open-graph.png';
-
-	import { register, init, getLocaleFromNavigator, _, locale, locales } from 'svelte-i18n';
-	import Icon from '$lib/components/Icon.svelte';
-	import { mdiClose, mdiMenuDown, mdiWeatherNight, mdiWeatherSunny } from '@mdi/js';
-	import { onMount } from 'svelte';
-
-	const languageNames: Record<string, string> = {
 		en: 'Русский',
 		'zh-Hans': '简体中文 (帕夏)'
 	};
@@ -165,7 +135,7 @@
 				>{$_('report_issue')}</a
 			>
 			-
-			<a href="https://forms.gle/RmQUjynvu21PQkg8A" class="link" target="_blank"
+			<a href="https://forms.gle" class="link" target="_blank"
 				>{$_('announcement_designFeedback_footer')}</a
 			>
 		</p>
@@ -173,7 +143,7 @@
 
 	<div class="snackbar" class:active={announcementActive}>
 		<div class="max">{$_('announcement_designFeedback_text')}</div>
-		<a class="inverse-link" target="_blank" href="https://forms.gle/RmQUjynvu21PQkg8A">
+		<a class="inverse-link" target="_blank" href="https://forms.gle">
 			{$_('announcement_designFeedback_link')}
 		</a>
 		<button class="transparent square" onclick={hideAnnouncement}><Icon d={mdiClose}></Icon></button>
