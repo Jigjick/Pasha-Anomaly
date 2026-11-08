@@ -22,14 +22,14 @@ body {
 	--error-container: #ffe4e6;
 	--on-error-container: #4c0519;
 
-	/* Фоны и поверхности с лёгким лавандовым подтоном */
+	/* Фоны и поверхности с лёгким лавандовым подтоном (Светлая тема — чёрный текст) */
 	--background: #faf8ff;
 	--on-background: #000000;
 	--surface: #f7f4ff;
-	--on-surface: #0a0a0f;
+	--on-surface: #000000;
 	--surface-variant: #e9e3ff;
 	--on-surface-variant: #1f1b2e;
-	color: #000000 !important;
+
 	--outline: #8b7fb8;
 	--outline-variant: #dcd4f7;
 	--shadow: rgba(124, 58, 237, 0.15);
@@ -56,7 +56,7 @@ body {
 	--radius-pill: 9999px;
 
 	background: var(--gradient-surface);
-	color: var(--on-background);
+	color: #000000 !important;
 	min-height: 100vh;
 	transition: background 0.3s ease, color 0.3s ease;
 
@@ -82,14 +82,14 @@ body {
 		--error-container: #881337;
 		--on-error-container: #ffe4e6;
 
-		/* Глубокие космически-фиолетовые фоны */
+		/* Глубокие космически-фиолетовые фоны (Тёмная тема — белый текст) */
 		--background: #0f0b1a;
 		--on-background: #ffffff;
 		--surface: #140f24;
 		--on-surface: #ffffff;
 		--surface-variant: #292045;
 		--on-surface-variant: #f3f0ff;
-		color: #ffffff !important;
+
 		--outline: #796da3;
 		--outline-variant: #342957;
 		--shadow: rgba(0, 0, 0, 0.5);
@@ -110,6 +110,8 @@ body {
 		/* Тёмные градиенты */
 		--gradient-primary: linear-gradient(135deg, #7c3aed 0%, #9333ea 50%, #db2777 100%);
 		--gradient-surface: radial-gradient(circle at top right, #231545 0%, #0f0b1a 65%);
+
+		color: #ffffff !important;
 	}
 }
 
@@ -121,6 +123,30 @@ label,
 	font-size: 1rem;
 }
 
+/* --- Жёсткий контраст текста для обеих тем --- */
+body p,
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6,
+body td,
+body th,
+body label,
+body article,
+body dialog,
+body .missed-label,
+body .tooltip,
+body .tooltip.max {
+	color: var(--on-surface) !important;
+}
+
+/* Сохраняем радужный градиент для процентов выше максимума */
+body .rainbow {
+	color: transparent !important;
+}
+
 /* --- Современные скругления и градиенты для элементов интерфейса --- */
 
 /* Кнопки (кроме текстовых ссылок) делаем полностью круглыми (капсулы) */
@@ -130,7 +156,7 @@ input[type='submit'],
 input[type='button'] {
 	border-radius: var(--radius-pill) !important;
 	background: var(--gradient-primary);
-	color: #ffffff;
+	color: #ffffff !important;
 	border: none;
 	padding: 0.65rem 1.4rem;
 	font-weight: 600;
@@ -169,7 +195,7 @@ textarea {
 	border-radius: 16px !important;
 	border: 1px solid var(--outline-variant);
 	background-color: var(--surface-container-lowest);
-	color: var(--on-surface);
+	color: var(--on-surface) !important;
 	padding: 0.6rem 1rem;
 	transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
@@ -205,7 +231,7 @@ button[role='link'] {
 	padding: 0;
 	background-color: transparent !important;
 	border: none;
-	color: var(--primary);
+	color: var(--primary) !important;
 	font-weight: 500;
 
 	display: flex;
