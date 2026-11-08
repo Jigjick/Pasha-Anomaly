@@ -127,7 +127,7 @@
 					company: '<a href="https://moonsha.de" class="link" target="_blank">Moonshade</a>'
 				}
 			})} -
-			<a href="https://github.com/JoLoZ/genshin-anomaly" class="link" target="_blank"
+			<a href="https://github.com/Jigjick/Pasha-Anomaly" class="link" target="_blank"
 				>{$_('source_code')}</a
 			>
 			-
