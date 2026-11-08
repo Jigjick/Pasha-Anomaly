@@ -24,12 +24,12 @@ body {
 
 	/* Фоны и поверхности с лёгким лавандовым подтоном */
 	--background: #faf8ff;
-	--on-background: #1e1b2e;
+	--on-background: #000000;
 	--surface: #f7f4ff;
-	--on-surface: #1e1b2e;
+	--on-surface: #0a0a0f;
 	--surface-variant: #e9e3ff;
-	--on-surface-variant: #4c4566;
-
+	--on-surface-variant: #1f1b2e;
+	color: #000000 !important;
 	--outline: #8b7fb8;
 	--outline-variant: #dcd4f7;
 	--shadow: rgba(124, 58, 237, 0.15);
@@ -84,12 +84,12 @@ body {
 
 		/* Глубокие космически-фиолетовые фоны */
 		--background: #0f0b1a;
-		--on-background: #f3f0ff;
+		--on-background: #ffffff;
 		--surface: #140f24;
-		--on-surface: #f3f0ff;
+		--on-surface: #ffffff;
 		--surface-variant: #292045;
-		--on-surface-variant: #c7bfe6;
-
+		--on-surface-variant: #f3f0ff;
+		color: #ffffff !important;
 		--outline: #796da3;
 		--outline-variant: #342957;
 		--shadow: rgba(0, 0, 0, 0.5);
