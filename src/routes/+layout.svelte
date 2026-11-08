@@ -40,7 +40,7 @@
 
 		return await Promise.allSettled([
 			init({
-				fallbackLocale: 'en',
+				fallbackLocale: 'zh-Hans',
 				initialLocale: getFinalInitialLocale()
 			})
 		]);
